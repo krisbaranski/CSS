@@ -6,19 +6,12 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  background: url(images/travel3.jpg) no-repeat center center;
-  background-size: cover;
-  margin: 0;
-  /* display: block; */
-  align-items: center;
-  justify-items: center;
-  height: 100vh;
+  background-color: #aaa;
+  margin: 10px;
 }
 
 head {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100px;
-  height: 100px;
   padding: 5px;
 }
 
@@ -27,7 +20,6 @@ h1 {
   text-align: center;
   font-size: 28px;
   font-family: inherit;
-  margin-top: 20px;
 }
 
 p {
@@ -35,75 +27,21 @@ p {
   color: rgb(255, 255, 255);
 }
 
-#amount {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 0;
-  border-radius: 3px;
-  padding: 7px 10px 7px 15px;
-  margin-left: 10px;
-  font-size: 16px;
-}
-#amount:focus {
-  outline: none;
+img {
+  width: 100%;
 }
 
-.parent {
-  position: relative;
+.container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
-/* .message {
-  font-family: inherit;
-  font-size: 25px;
-  text-align: center;
-  color: #fff;
-  margin-top: 90px;
-} */
-
-.box {
-  background-color: rgba(209, 209, 209, 0.3);
-  border: 1px solid rgb(116, 116, 116);
-  box-shadow: 0 8px 12px -6px rgba(37, 37, 37, 0.445);
-  grid-template-columns: repeat(auto-fill, minmax(95px, auto));
-  /* flex: 1 1 200px;  Stretching: 
-  flex: 0 1 200px;  No stretching: */
+.container > div {
   cursor: pointer;
-  position: relative;
-  aspect-ratio: 3 / 2;
-  max-width: 400px;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 5px;
 }
 
-.box h3 {
-  color: rgba(59, 59, 59, 0.664);
-  font-size: 24px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-}
-
-.box:focus {
-  outline: 0;
-}
-
-.postcard {
-  background-color: rgba(56, 56, 56, 0.26);
-  box-shadow: 0 10px 10px -6px #000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-  max-height: 90%;
-  aspect-ratio: 3 / 2;
-  border: 1px solid rgb(43, 43, 43);
-  border-radius: 5px;
-  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.897);
-  z-index: 10;
+.example {
 }
 
 .hidden {

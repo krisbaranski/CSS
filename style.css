@@ -10,11 +10,6 @@ body {
   margin: 10px;
 }
 
-head {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-}
-
 h1 {
   color: rgb(255, 255, 255);
   text-align: center;
@@ -39,9 +34,6 @@ img {
 
 .container > div {
   cursor: pointer;
-}
-
-.example {
 }
 
 .hidden {

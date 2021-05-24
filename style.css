@@ -30,6 +30,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  align-items: center;
 }
 
 .container > div {
@@ -40,25 +41,11 @@ img {
   display: none;
 }
 
-.btn {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 0;
-  border-radius: 3px;
-  padding: 8px;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 10px;
-}
-
-.btn a {
-  color: #000;
-  text-decoration: none;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.9);
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

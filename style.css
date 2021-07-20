@@ -2,35 +2,138 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-body {
+body{background-color:#1A1919;text-align:center;}
+
+.tileContainer{
+  border:10px solid black;
+  display:inline-block;
+  position:relative;
+  width:1024px;
+  height:768px;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+
+.tile{
+  position:relative;
+  vertical-align:top;
+  display:inline-block;
+  border-right:1px solid rgba(0, 0, 0, 0.5);
+  border-bottom:1px solid rgba(0, 0, 0, 0.5);  
+  box-sizing:border-box;
+}
+
+.tile:after{
+  content:"";
+  background-color:#cc1c32;
+  width:6px;
+  height:6px;
+  position:absolute;
+  top:100%;
+  right:0px;
+  transform:translate(50%, -50%);
+  z-index:2;
+  line-height:1;
+}
+
+/*-- no grid --*/
+
+.noGrid .tile{
+  border-right:0px solid rgba(0, 0, 0, 0.5);
+  border-bottom:0px solid rgba(0, 0, 0, 0.5);
+}
+
+.noGrid .tile:after{
+  content:none;
+}
+
+/* body {
   font-family: 'Muli', sans-serif;
-  background-color: #aaa;
+  background-color: rgb(38, 62, 85);
   margin: 20px;
+  overflow: hidden;
+} */
+
+.placeholder{
+  display:inline-block;
+  position:relative;
+  width:600px;
+  height:600px;
+  overflow:hidden;
+  box-sizing:border-box;
+  margin-top:100px;
 }
 
+.gridContainer{
+  width:100%;
+  height:100%;
+}
+
+.gridTile
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-origin:center;
+}
+/* 
+
+
+
+*/
 h1 {
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-size: 28px;
+  color: rgb(42, 69, 95);
+  font-size: 4rem;
   font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+h1:hover, p:hover {
+  color: rgb(88, 110, 131);
 }
 
 p {
-  text-align: center;
-  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  color: rgb(42, 69, 95);
+}
+
+.example {
+  position: relative;
+  margin: 20px 0;
+}
+
+.example p {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #fff;
 }
 
 img {
   width: 100%;
 }
 
+
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  align-items: center;
+  /* display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ gap: 20px;
+  align-items: center; */
 }
 
 .container > div {
@@ -42,10 +145,10 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
+  /* .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+  } */
 }

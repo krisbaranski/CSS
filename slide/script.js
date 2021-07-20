@@ -17,6 +17,11 @@ images[3] =
 // Change Image
 function changeImg() {
   document.slide.src = images[i];
+  // for (let i of images) {
+  //   document.slide.style.classList.remove('slide');
+  //   images[i].classList.add('slide');
+  //   i++;
+  // }
 
   // Check If Index Is Under Max
   if (i < images.length - 1) {
@@ -26,18 +31,9 @@ function changeImg() {
     // Reset Back To O
     i = 0;
   }
-
-  // Run function every x seconds
+  // Run function every 'time' seconds
   setTimeout('changeImg()', time);
 }
-
-// Fading Image
-function activeImg() {
-  images.forEach(i => document.slide.style.classList.remove('active'));
-  images[i].classList.add('active');
-  i++;
-}
-// activeImg();
 
 // Run function when page loads
 window.onload = changeImg();

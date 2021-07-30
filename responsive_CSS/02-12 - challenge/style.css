@@ -9,9 +9,9 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  margin: 0;
   font-size: 1.3125rem;
   color: #222c2a;
 }
@@ -49,9 +49,12 @@ section {
 
 .intro {
   background-color: #f3eed9;
-  padding: 200px 0;
   color: #824936;
   text-align: center;
+  min-height: 660px;
+
+  display: flex;
+  align-items: center;
 }
 
 .intro-text {
@@ -74,4 +77,24 @@ section {
 .section-four {
   background-color: #824936;
   color: #fff;
+}
+
+@media (min-width: 600px) {
+  .row {
+    display: flex;
+  }
+  .col {
+    width: 100%;
+  }
+  .col + .col {
+    margin-left: 4em;
+  }
+
+  .intro-title {
+    font-size: 3.5rem;
+  }
+
+  .section-title--dark {
+    text-align: center;
+  }
 }

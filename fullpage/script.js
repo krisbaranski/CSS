@@ -1,27 +1,32 @@
 'use strict';
 
+//  // If using fullpage.js
+
 new fullpage('#fullpage', {
   autoScrolling: true,
   navigation: true,
-});
+  onLeave: (origin, destination, direction) => {
+    const section1 = document.querySelector('.s1');
+    const section2 = document.querySelector('.s2');
+    const section3 = document.querySelector('.s3');
 
-// Old animation
-
-// const hero = document.querySelector('.hero');
-// const slider = document.querySelector('.slider');
-// const logo = document.querySelector('#logo');
-// const hamburger = document.querySelector('.hamburger');
-// const headline = document.querySelector('.headline');
-
-// const timeline = new TimelineMax();
-
-// timeline
-//   .fromTo(
-//     hero,
-//     1.4,
-//     { height: '0%' },
-//     { height: '80%', ease: Power2.easeInOut }
-//   )
+    const timeline = new TimelineMax({ delay: 0.5 });
+  
+  timeline.fromTo(section1, 3.5, { opacity: 0 }, { opacity: 1 }, '+=.5')
+  .fromTo(
+    section2,
+    1.4,
+    { height: '70%' },
+    { height: '100%', ease: Power2.easeInOut }
+  )
+  .fromTo(section3, 3.5, { opacity: 0 }, { opacity: 1 }, '-=.5')
+  .fromTo(
+    section3,
+    1.4,
+    { height: '70%' },
+    { height: '100%', ease: Power2.easeInOut }
+  )
+  .fromTo(section3, 3.5, { opacity: 0 }, { opacity: 1 }, '-=.5');
 //   .fromTo(
 //     hero,
 //     1.2,
@@ -37,3 +42,8 @@ new fullpage('#fullpage', {
 //     '-= 2'
 //   )
 //   .fromTo(headline, 1, { opacity: 0 }, { opacity: 1 }, '-= 0.8');
+});
+
+// // Old animation
+
+

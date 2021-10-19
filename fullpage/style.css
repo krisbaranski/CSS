@@ -1,16 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .section {
+  position: relative;
   height: 100vh;
   scroll-snap-align: start;
 }
 
-/* .container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-} */
+.s1 {
+  background-image: url(https://images.unsplash.com/photo-1467010389552-c18c4d79966f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=772&q=80);
+  background-size: cover;
+}
+
+.section.s1 h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  font-size: 2.4rem;
+  color: transparent;
+  background: linear-gradient(to left, #a0b0c7, #555d69, #a7b5ca);
+  -webkit-background-clip: text;
+}
+
+.s2 {
+  background-image: url(https://images.unsplash.com/photo-1467010389552-c18c4d79966f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=772&q=80);
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.section.s2 h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%) rotate(180deg);
+  font-size: 2.4rem;
+  color: transparent;
+  background: linear-gradient(to left, #a0b0c7, #555d69, #a7b5ca);
+  -webkit-background-clip: text;
+}
+
+.section.s2 p {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translate(-10%, -30%) rotate(180deg);
+  font-size: 1.2rem;
+}
+
+.s3 {
+  background-image: url(https://images.unsplash.com/photo-1587405550618-dfdbf8771d2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2680&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1482996207824-b0f01de61751?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80); */
+  background-size: cover;
+  background-position: center;
+}
+
+.section.s3 h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-size: 3rem;
+  color: transparent;
+  background: linear-gradient(to left, #a0b0c7, #555d69, #a7b5ca);
+  -webkit-background-clip: text;
+}
+
+/* @media (max-width: 1170px) {
+  .s1 {
+    background: ;
+    width: 100%;
+  }
+} ; */

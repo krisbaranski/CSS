@@ -20,13 +20,16 @@ body {
 #main-header {
   background-color: #1f3157;
   color: #fff;
-  padding: 20px 0;
+  padding-top: 20px;
+  /* border: 1px solid red; */
 }
 
 #navbar {
-  background-color: #aeb9d8b2;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: baseline;
   color: fff;
-  padding: 20px 0;
+  transform: translateY(-20px);
 }
 
 #navbar ul {
@@ -42,11 +45,11 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
-  padding-right: 15px;
+  padding-left: 15px;
 }
 
 #showcase {
-  background-image: url(https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1476&q=80);
+  background-image: url(https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
   background-position: center right;
   min-height: 500px;
   margin-bottom: 30px;

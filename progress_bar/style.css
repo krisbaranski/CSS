@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overscroll-behavior-y: none;
+}
+
+section {
+  margin: 10% 20%;
+}
+
+h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 150%;
+  color: #1e1e1e;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.2s ease-out;
+}
